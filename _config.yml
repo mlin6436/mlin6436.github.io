@@ -1,3 +1,49 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: true
+# Dependencies
+markdown:	redcarpet
+pygments:	true
+
+# Permalinks
+permalink:	/blog/:title
+paginate_path: 'page:num'
+
+# Setup
+title:		Meng Lin's Playground
+tagline:	'Blog'
+description:	'Share ideas, experience and good jokes.'
+url:		http://mlin6436.github.io/
+
+author:
+  name:		'Meng Lin'
+  url:		https://google.com/+MengLin
+
+paginate:	5
+
+# Custom vars
+icon:		/assets/images/icon.jpg
+cover:		/assets/images/cover.jpg
+
+social:
+  - icon:	twitter
+    url:	https://twitter.com/mlin6436
+    desc:	Follow me on Twitter
+
+  - icon:	github
+    url:	https://github.com/mlin6436
+    desc:	Fork me on GitHub
+
+  - icon:	googleplus-alt
+    url:	https://google.com/+MengLin
+    desc:	Add me on Google+
+
+  - icon:	linkedin
+    url:	http://uk.linkedin.com/in/mlin6436
+    desc:	Find me on LinkedIn
+
+#menu:
+#  - title:	Home
+#    url:	/
+    
+copyright:
+  author:	Meng Lin
+  url:		http://mlin6436.github.io/
+  type_title:	All rights reserved
