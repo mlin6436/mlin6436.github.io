@@ -40,7 +40,7 @@ social:
     desc:	Find me on LinkedIn
 
   - icon: feed
-    url: http://mlin6436.github.com/atom.xml
+    url: http://mlin6436.github.io/atom.xml
     desc: Subscribe to my feed
 
 menu:
