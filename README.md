@@ -1,18 +1,7 @@
-#Thinny - The Infinite's Nymphet
+#Meng Lin's Playground
 
-##About
-Thinny is a beautiful theme for [Jekyll](http://jekyllrb.com/).
+##Why
+In the love of lightweight web hosting, Jekyll and GitHub, I finally decided to give it a go on this platform. This is a replicate of my playground on [Blogger](http://mlindev.blogspot.co.uk/), and I intend to use this more often. I will maintain both for the timing until the date comes to pull the plug.
 
-(if you're looking for the [Ghost](http://ghost.org) release of the theme, check [this page](https://github.com/camporez/Thinny/releases/tag/v0.3-alexandra))
-
-##Demo
-[![Preview image](https://f.cloud.github.com/assets/5755892/2002329/bdb5a052-85ed-11e3-8e00-a892910b6917.png)](http://camporez.com/)
-The above image is a preview of how the post header looks on Thinny.
-
-A live demo is available [on my personal blog](http://camporez.com/).
-
-##More information
-Read the blog post [here](http://camporez.com/blog/thinny-2/).
-
-##Reporting issues
-You can report an issue or request a feature [here](http://github.com/camporez/camporez.github.io/issues) or on [twitter](http://twitter.com/iancamporez).
+##Suggestions
+Any comments or suggestions are welcome, and please drop me an [email](mailto:mlin6436@gmail.com) or ping me on [Twitter](https://twitter.com/mlin6436).
