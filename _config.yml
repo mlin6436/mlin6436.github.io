@@ -49,6 +49,11 @@ menu:
   - title:	About
     url:	/about.html
 
+analytics :
+  provider : google 
+  google : 
+      tracking_id : 'UA-53512225-1'
+
 copyright:
   author:	MengLin
   url:		/
