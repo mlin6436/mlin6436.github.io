@@ -1,15 +1,15 @@
 <label class="menu" for="_1">
-	<span class="genericon genericon-menu"></span>
+	<a href="/" target="_self" title="Home"><span class="genericon genericon-home"></span></a>
 </label>
-<input id="_1" type="checkbox">
+<!-- <input id="_1" type="checkbox">
 <div class="menu-content">
 	<div class="menu" style="background-color: #777; z-index: -1;"></div>
 	{% for item in site.menu %}
 	<a href="{{ item.url }}">{{ item.title }}</a><br>
 	{% endfor %}
-</div>
+</div> -->
 <div class="social-links">
 	{% for social in site.social %}
-	<a href="{{ social.url }}" target="_blank" title="{{ social.desc }}"><span class="genericon genericon-{{ social.icon }}"></span></a>
+	<a href="{{ social.url }}" target="_self" title="{{ social.desc }}"><span class="genericon genericon-{{ social.icon }}"></span></a>
 	{% endfor %}
 </div>

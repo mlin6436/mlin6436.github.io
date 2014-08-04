@@ -3,7 +3,9 @@ layout: post
 title: "Optimal String Modification in Java"
 ---
 
+<div class="message">
 It probably rarely occurs to people there could be a small bump on performance when manipulating strings in Java, since the computing power nowadays also considered to be infinite, and nobody will really try to add a dozen dead sea scrolls into one string or tweak it.
+</div>
 
 #Why should I bother!?
 

@@ -7,8 +7,8 @@ permalink:	/blog/:title
 paginate_path: 'page:num'
 
 # Setup
-title:		Meng Lin's Playground
-tagline:	'Blog'
+title:		Meng Lin
+tagline:	'Playground'
 description:	'Share ideas, experience and good jokes.'
 url:		http://mlin6436.github.io/
 
@@ -19,7 +19,7 @@ author:
 paginate:	5
 
 # Custom vars
-icon:		/assets/images/icon.jpg
+icon:		/assets/images/icon.png
 cover:		/assets/images/cover.jpg
 
 social:
@@ -39,11 +39,18 @@ social:
     url:	http://uk.linkedin.com/in/mlin6436
     desc:	Find me on LinkedIn
 
-#menu:
-#  - title:	Home
-#    url:	/
-    
+  - icon: feed
+    url: http://mlin6436.github.com/atom.xml
+    desc: Subscribe to my feed
+
+menu:
+  - title:	Home
+    url:	/
+  - title:	About
+    url:	/about.html
+
 copyright:
-  author:	Meng Lin
-  url:		http://mlin6436.github.io/
+  author:	MengLin
+  url:		/
   type_title:	All rights reserved
+  type_url:	/LICENSE
