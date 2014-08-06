@@ -1,0 +1,7 @@
+#article a.anchor {
+  color: #ffffff;
+}
+
+#article a.anchor:hover {
+  color: #2a7ead;
+}
