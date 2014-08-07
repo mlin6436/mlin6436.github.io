@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dive into Git"
+tags: ["git"]
 ---
 
 <div class="message">

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Optimal String Modification in Java"
+tags: ["java", "string", "modification", "stringbuffer", "stringbuilder", "performance", "synchronised"]
 ---
 
 <div class="message">
