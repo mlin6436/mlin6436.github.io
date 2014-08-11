@@ -40,7 +40,7 @@ We would receive a lovely message saying 'CONFLICT', and the merge should fail m
 
 Supposingly, you can go blame the other people an incompetent dev, or a complete nutcase.
 
-{% include image.html url="/media/2014-08-07-resolving-conflicts-in-git/blame-game.gif" width="100%" description="Blame game" %}
+{% include image.html url="/media/2014-08-11-resolving-merge-conflicts-in-git/blame-game.gif" width="100%" description="Blame game" %}
 
 Since there is only [one in a million](http://www2.jpl.nasa.gov/sl9/back2.html) chance for merge conflicts to happen, I rather take this as an opportunity to unleash the power of dragon.
 
