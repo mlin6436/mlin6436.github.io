@@ -116,7 +116,7 @@ DROP TABLE #DatabaseTableIndexResult
 
 ##TIPS
 
-A query to find all indexes on a database.
+A query to find all indexes on a database.  
 
 {% highlight sql %}
 SELECT

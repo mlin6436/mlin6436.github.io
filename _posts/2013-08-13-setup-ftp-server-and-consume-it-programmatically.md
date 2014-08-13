@@ -8,39 +8,39 @@ tags: ["ftp", "server", "client", "windows server 2008", "c#", ".net", "programm
 
 Open `Server Manager`, and add new `Role` to it.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-01.png" width="100%" description="xxx" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-01.png" width="100%" description="Add new role into server manager" %}
 
 In `Add Roles Wizard`, tick `Web Server (IIS)`.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-02.png" width="100%" description="XXX" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-02.png" width="100%" description="Enable IIS on the server" %}
 
 In `Role Services`, tick everything under `FTP Server` section. Follow the wizard to the end to install all the features required.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-03.png" width="100%" description="XXX" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-03.png" width="100%" description="Enable FTP on the server" %}
 
 Open IIS, tick `Add FTP Site` when right-click on `Sites` to add a new FTP site.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-04.png" width="100%" description="XXX" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-04.png" width="100%" description="Add FTP site" %}
 
 Fill in the desirable site name and file location.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-05.png" width="100%" description="XXX" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-05.png" width="100%" description="Configure FTP site details" %}
 
 Choose `All Unassigned` for `IP Address`, and do not SSL if you just want a simple FTP site.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-06.png" width="100%" description="XXX" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-06.png" width="100%" description="Configure FTP site IP" %}
 
 Choose `Basic Authentication` and allow `All Users` to `Read` and `Write`. And carry on finishing the wizard.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-07.png" width="100%" description="XXX" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-07.png" width="100%" description="Configure FTP site authentication" %}
 
 Open `Windows Firewall with Advanced Security` to add a new rule to the FTP site.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-08.png" width="100%" description="XXX" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-08.png" width="100%" description="Configure firewall" %}
 
 Specify a port for FTP communication, and leave the rest as default.
 
-{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-09.png" width="100%" description="XXX" %}
+{% include image.html url="/media/2013-08-13-setup-ftp-server-and-consume-it-programmatically/ftp-server-setup-09.png" width="100%" description="Specify firewall port" %}
 
 To verify the FTP is working, navigate to `ftp://<yourftpsiteaddress>` in your browser.
 
