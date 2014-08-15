@@ -74,6 +74,6 @@ You can now check in the changes to TFS, and you will find your TFS build server
 
 #References
 
-- [Using Nuget without committing packages](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages)
+[Using Nuget without committing packages](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages)
 
-- [Prevent needing to add nuget.exe to source control](http://stackoverflow.com/questions/12022154/prevent-needing-to-add-nuget-exe-to-source-control)
+[Prevent needing to add nuget.exe to source control](http://stackoverflow.com/questions/12022154/prevent-needing-to-add-nuget-exe-to-source-control)

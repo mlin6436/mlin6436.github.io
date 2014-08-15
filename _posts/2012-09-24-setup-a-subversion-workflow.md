@@ -43,6 +43,8 @@ And that's all you need to do to setup a svn server and happy check in!
 
 #Refences
 
-- [Why should set up network sharing repository](http://tortoisesvn.net/docs/release/TortoiseSVN_en/tsvn-serversetup.html)
-- [A step-by-step guide video of server SVN setup](http://www.youtube.com/watch?v=yGIo9_x-YSo)
-- [A step-by-step guide of server SVN setup](http://rajibmahmud.wordpress.com/2009/01/09/work-with-visual-svn-server-tortoise-svn/)
+[Why should set up network sharing repository](http://tortoisesvn.net/docs/release/TortoiseSVN_en/tsvn-serversetup.html)
+
+[A step-by-step guide video of server SVN setup](http://www.youtube.com/watch?v=yGIo9_x-YSo)
+
+[A step-by-step guide of server SVN setup](http://rajibmahmud.wordpress.com/2009/01/09/work-with-visual-svn-server-tortoise-svn/)
