@@ -5,7 +5,7 @@ tags: ["git", "commands"]
 ---
 
 <div class="message">
-I have summarised some useful Git commands, grouped by common version control workflow in Git. If you are new to Git, going through the basics should be more than enough to get you started. On top of that, it is all about smoke and mirrors that every hardcore Git users could like to show off. So enjoy!
+I have summarised some high usage Git commands, grouped by common Git workflow. If you are new to Git, going through the basics should be more than enough to get you started. On top of that, it is all about smoke and mirrors that every hardcore Git users would like to show off. So enjoy!
 </div>
 
 #Basics to get started
@@ -14,13 +14,15 @@ I have summarised some useful Git commands, grouped by common version control wo
 
 For Mac, `brew install git`.
 
-For Linux, `sudo apt-get install git` (you may try `sudo apt-get install git-core` in case of any problem) or `yum install git`.
+For Linux, `sudo apt-get install git` (you can try `sudo apt-get install git-core` if Git is not installed) or `yum install git`.
 
-For Windows, download the client [here](http://www.git-scm.com/) and install it.
+For Windows, download the bash client [here](http://www.git-scm.com/) and install it, and you get bash commands for free, happy days!
 
-There are also GUIs available from [GitHub](https://mac.github.com/) or [Tower](http://www.git-tower.com/), even though I tend not to use due to personal preferences.
+Even though I tend to avoid GUIs cause they are confusing, inefficient and most importantly not hipster, you can still find something from [GitHub](https://mac.github.com/) or [Tower](http://www.git-tower.com/).
 
 ##Create a repository
+
+Easy peasy.
 
 {% highlight bash %}
 $ git init
@@ -28,60 +30,65 @@ $ git init
 
 ##Copy a remote repository
 
+You can copy either from a server or most likely GitHub, you can have a quick scan through [this](https://gist.github.com/grawity/4392747) to decide which remote URL to use.
+
 {% highlight bash %}
-$ git clone <repo>
+$ git clone <repository>
 {% endhighlight %}
+
+I personally use SSH because I used to work behind a corporate proxy.
 
 ##Stage changes
 
-To add changes one by one.
+Before commit, you need to group your changes and add them into stage.
+
+To add files one by one.
 
 {% highlight bash %}
 $ git add <file>
 {% endhighlight %}
 
-Don't care, just add them all.
+Or don't care, just add them all.
 
 {% highlight bash %}
 $ git add .
 {% endhighlight %}
 
-Some really really cool switch you should definitely try: patch add.
+Some really cool [stuff](http://nuclearsquid.com/writings/git-add/) you should try with stage.
 
 {% highlight bash %}
-$ #TODO: I want to brag about this :)
 $ git add -p
 {% endhighlight %}
 
 ##Stash changes
 
-Not ready to commit, or before re-synchronising your code with remote? Why not stash the changes before losing them?
+Not ready to commit, or before re-synchronising your code with remote and don't want to lose your local changes? Stash them.
 
-It's dead easy.
+It does what it says, to keep your things away from destruction.
 
 {% highlight bash %}
 $ git stash
 {% endhighlight %}
 
-You can always find everything here.
+You can always find the things you stashed here.
 
 {% highlight bash %}
 $ git stash list
 {% endhighlight %}
 
-And reapplying last change set is simple.
+And applying last change set back to codebase.
 
 {% highlight bash %}
 $ git stash pop
 {% endhighlight %}
 
-Unless you want to reapply a specified change set.
+Or applying a specified change set.
 
 {% highlight bash %}
 $ git stash pop <stash>
 {% endhighlight %}
 
-Or apply the changes, but also keep the stash in the stack.
+Unless you want to both apply a change set and keep the stash in the stack.
 
 {% highlight bash %}
 $ git stash apply <stash>
@@ -89,7 +96,7 @@ $ git stash apply <stash>
 
 ##Commit changes
 
-Happy with the changes? Commit them and give them a meaningful message. That is seriously not a question!
+Happy with the changes? Commit them and give them a meaningful message. And I seriously mean [it](http://stackoverflow.com/questions/43598/suggestions-for-a-good-commit-message-format-guideline)!
 
 {% highlight bash %}
 $ git commit -m "<message>"
@@ -97,7 +104,7 @@ $ git commit -m "<message>"
 
 ##Commit logs
 
-Like commit history of any version control system, but just more tricks you have got with Git.
+Like showing commit history in any version control system, Git is just more powerful in every single way.
 
 To see the commits from a specific user.
 
@@ -105,7 +112,7 @@ To see the commits from a specific user.
 $ git log --author=<user>
 {% endhighlight %}
 
-To see the files changed.
+To show the files changed.
 
 {% highlight bash %}
 $ git log --name-status
@@ -125,23 +132,23 @@ $ git log --graph --oneline --decorate --all
 
 ##Push changes
 
-Want to be colleborative? You need to push your commits to the central repository so that your colleagues can see them.
+So far it is all great, but only in your machine. If you want to be colleborative, push your commits to the central repository so that your colleagues can [criticise](http://dilbert.com/strips/comic/2011-01-14/) them.
 
 {% highlight bash %}
 $ git push
 {% endhighlight %}
 
-In case you haven't setup a remote repository for the current branch yet, hook it up with one.
+In case you haven't setup a remote repository for your current branch yet, hook it up with one.
 
 {% highlight bash %}
 $ git remote add origin <remote>
 {% endhighlight %}
 
-Then do the push to remote.
+Then do the push again.
 
 ##Branch
 
-It's important to create a branch to get everything organised for things like new feature, bugfix or release candidate. TODO: And I will put together a blog about Git workflow to explain this further.
+It's important to get organised using dedicated branches for stuff like new feature, bugfix or release candidate. TODO: I will put together a blog about Git workflow to explain this further.
 
 Branching in Git is fast. Faster than subversion.
 
@@ -177,7 +184,7 @@ $ git push -u origin <branch>
 
 ##Update
 
-To get the lastest code from remote repository.
+It is a good idea to get a cup of tea in the morning, and update your code!
 
 {% highlight bash %}
 $ git pull
@@ -185,24 +192,28 @@ $ git pull
 
 ##Merge and Rebase
 
-After the update, you are likely to have some conflicts. To solve them, use merge, and Git will automatically integrate the changes to your branch.
+And because you haven't done what I suggested above often enough, you are more than likely to end up with conflicts after a short while.
+
+Keep calm and use merge, and Git will automatically integrate the changes for you.
 
 {% highlight bash %}
 $ git merge <branch>
 {% endhighlight %}
 
-Still faster than subversion huh.
+And this is still faster than subversion, yet another win for Git.
 
-Otherwise, use rebase to fast-forward (like a transplant) your branch changes onto feature history.
+Alternatively, use rebase to fast-forward your branch.
 
 {% highlight bash %}
-$ git checkout <feature>
+$ git checkout <master>
 $ git rebase <branch>
 {% endhighlight %}
 
-And you can't even do this in subversion.
+{% include image.html url="/media/2014-08-20-useful-git-commands/git-rebase.png" width="100%" description="Git rebase works like a transplant" %}
 
-A little case study just to see if you are still awake: synchronising a fork to its source.
+Be aware that rebase will replace current branch's commit history with the other. And that is why a timely update is so important to avoid situation like this.
+
+A little case study just to see if you are still awake: how to synchronise a fork with the source of truth.
 
 First add the source repository as an upstream.
 
@@ -223,7 +234,7 @@ $ git remote add upstream <remote>
 $ git rebase upstream/master
 {% endhighlight %}
 
-If you just want the changes, but don't necessarily need the change history, merge is another option. Not recommended though.
+If you just want the changes, but don't necessarily need the change history, merge is another option. I would not recommend this as it could cause more pain later.
 
 {% highlight bash %}
 $ git merge upstream/master
@@ -237,7 +248,7 @@ $ git push origin master -f
 
 ##Tagging
 
-Create a tag with a specific commit.
+Tag a specific commit for release.
 
 {% highlight bash %}
 $ git tag <tag> <commit>
@@ -245,39 +256,33 @@ $ git tag <tag> <commit>
 
 #The power of undoing
 
+Use with caution.
+
 ##Undo changes
 
-To revert a single file.
+Before changes are staged, you can revert a single file.
 
 {% highlight bash %}
 $ git checkout <file>
 {% endhighlight %}
 
-To revert all changes.
+Or revert all of them.
 
 {% highlight bash %}
 $ git reset --hard HEAD
 {% endhighlight %}
 
-##Unstage changes
+##Undo stage
 
-What happens if you put the wrong file into stage? Undo it.
+What happens if you put the wrong file into stage, or don't want it to be part of the commit?
 
 {% highlight bash %}
 $ git reset <file>
 {% endhighlight %}
 
-##Rewrite last commit message
-
-Go edit the last commit message as you wish.
-
-{% highlight bash %}
-$ git commit --amend
-{% endhighlight %}
-
 ##Undo commits
 
-Revert a commit by creating a new commit to undo the last commit.
+Revert a commit by creating a new commit to rollback last commit.
 
 {% highlight bash %}
 $ git revert <commit>
@@ -289,13 +294,21 @@ Rollback to a specific commit, and reserve changes.
 $ git reset --keep <commit>
 {% endhighlight %}
 
-Abandon ship. Use with caution.
+Abandon ship.
 
 {% highlight bash %}
 $ git reset --hard <commit>
 {% endhighlight %}
 
-NOTE: reset is similar to revert under the hood, the removed info is kept in git database for 30 days. And you can always unearth them.
+Reset is similar to revert under the hood, the removed info is still kept in git database for 30 days. So you can always unearth them if you want.
+
+##Rewrite last commit message
+
+Wrote something inappropriate? Rewrite it. Limited to last commit only.
+
+{% highlight bash %}
+$ git commit --amend
+{% endhighlight %}
 
 ##Delete a branch
 
@@ -313,7 +326,7 @@ $ git branch -dr origin/<branch>
 
 #Some things to bear in mind
 
-Git is a powerful tool, but it doesn't prevent you from shooting your own foot if you don't work under some principles. Therefore, in order to make everyone's life easier, it is useful to have some common sense when working with Git.
+Git is a powerful tool, but it doesn't prevent you from shooting your own foot if you don't work under some basic principles. In order to make everyone's life easier, it is useful to have some common sense when working with Git.
 
 >Commit only related changes
 
