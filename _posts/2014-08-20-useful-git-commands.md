@@ -148,7 +148,7 @@ Then do the push again.
 
 ##Branch
 
-It's important to get organised using dedicated branches for stuff like new feature, bugfix or release candidate. TODO: I will put together a blog about Git workflow to explain this further.
+It's important to get codebase organised using dedicated branches for stuff like new feature, bugfix or release candidate. [This](http://nvie.com/posts/a-successful-git-branching-model/) has been proven to be a very successful branching model for the majority.
 
 Branching in Git is fast. Faster than subversion.
 
