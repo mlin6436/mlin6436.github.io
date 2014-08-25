@@ -10,7 +10,7 @@ I have summarised some high usage Git commands, grouped by common Git workflow. 
 
 #Basics to get started
 
-##Setup
+##1. Setup
 
 For Mac, `brew install git`.
 
@@ -20,7 +20,7 @@ For Windows, download the bash client [here](http://www.git-scm.com/) and instal
 
 Even though I tend to avoid GUIs cause they are confusing, inefficient and most importantly not hipster, you can still find something from [GitHub](https://mac.github.com/) or [Tower](http://www.git-tower.com/).
 
-##Create a repository
+##2. Create a repository
 
 Easy peasy.
 
@@ -322,6 +322,26 @@ And remotely.
 
 {% highlight bash %}
 $ git branch -dr origin/<branch>
+{% endhighlight %}
+
+#It's all about Flexibility
+
+Git is highly configurable in itself.
+
+{% highlight bash %}
+$ git config --list
+{% endhighlight %}
+
+And indeed whatever is listed here and more, you can adjust it based on your own preferences.
+
+If you have an extremely small terminal, typically less than 72 characters wide, your display will be truncated like following (left) before [2.1.0](https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.1.0.txt).
+
+{% include image.html url="/media/2014-08-20-useful-git-commands/git-truncation.png" width="100%" description="Git log displayed with truncati (left) and normal (right)" %}
+
+You don't have to wait for the 2.1.0 to able to display a wrapped log like the example to the right. Even though `git log` uses `less -S` by default, it doesn't mean you can't make it more user friendly (as to the right):
+
+{% highlight bash %}
+$ git config core.pager "less"
 {% endhighlight %}
 
 #Some things to bear in mind
