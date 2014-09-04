@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Useful Git Commands"
+title: "Dive into Git"
 tags: ["git", "commands"]
 ---
 
