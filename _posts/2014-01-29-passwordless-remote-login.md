@@ -29,7 +29,7 @@ So far, it is all done. You will not be asked to type in any password next time 
 It would be great if can we save the time on typing the hideous 'SSH' and 'user@ip' as well, wouldn't it? It can be easily done by setting up an alias.
 
 {% highlight bash %}
-$ alias apple='ssh <user>@<ip>' >> ~/.bashrc
+$ echo "alias apple='ssh <user>@<ip>'" >> ~/.bashrc
 {% endhighlight %}
 
 or `.bash_profile` in Mac. And there you go, `apple` is your new login!
