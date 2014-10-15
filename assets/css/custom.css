@@ -5,3 +5,8 @@
 #article a.anchor:hover {
   color: #2a7ead;
 }
+
+.display-none {
+  visibility: hidden;
+  display: none;
+}
