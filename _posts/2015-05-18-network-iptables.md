@@ -161,7 +161,11 @@ $ sudo iptables -I INPUT -s 127.0.0.1/24 -j ACCEPT
 $ sudo iptables -I OUTPUT -d 127.0.0.1/24 -j ACCEPT
 {% endhighlight %}
 
-By doing this, you will be able to take back the control and launch application from local.
+By doing this, you will be able to take back the control and launch application from local. Another way to do this is by using loopback, but I couldn't get it working in the way people suggested, so I am just listing it out for argument sake.
+
+{% highlight bash %}
+$ sudo iptables -I INPUT 1 -i lo -j ACCEPT
+{% endhighlight %}
 
 # Script!
 
