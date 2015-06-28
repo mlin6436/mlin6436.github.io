@@ -5,7 +5,7 @@ tags: ["network", "iptables", "linux", "raspberry pi"]
 ---
 
 <div class="message">
-This time, I get to play with <a url="https://www.raspberrypi.org/">Raspberry Pi</a> (<a url="https://www.raspbian.org/">Raspbian</a>) to limit its network accessibility to meet our security compliances.
+This time, I get to play with <a href="https://www.raspberrypi.org/">Raspberry Pi</a> (<a href="https://www.raspbian.org/">Raspbian</a>) to limit its network accessibility to meet our security compliances.
 </div>
 
 # Thought Process
