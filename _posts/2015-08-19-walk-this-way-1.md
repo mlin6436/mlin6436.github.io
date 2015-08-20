@@ -5,12 +5,12 @@ tags: ["scala", "play", "activator", "dashboard project", "continuous delivery",
 ---
 
 <div class="message">
-This time, I am going to use a series of blogs, based on a 2-month project my team has done in Platform in the BBC, to showcase a couple of good engineering practices, some bits and bots about using <a href="http://www.scala-lang.org/">Scala</a> and <a href="https://playframework.com/">Play</a> framework, and reflect on what we could have done better.
+This time, I am going to use a series of blogs, based on a 2-month project my team has done within Platform team at the BBC, to showcase a couple of good engineering practices, some bits and bots about using <a href="http://www.scala-lang.org/">Scala</a> and <a href="https://playframework.com/">Play</a> framework, and reflect on what we could have done better.
 </div>
 
 # In the Beginning
 
-My team needs a dashboard, and the reason why we need it so urgently is: we have taken over many products in the past few months and the means of keeping our tabs on them are so divided.
+My team needs a dashboard, and the reason why we need it so urgently is: we have taken over many products in the past few months and the means of keeping tabs on them are so diverse.
 
 There are currently a few ways to monitor a cloud product in the BBC:
 
@@ -25,7 +25,7 @@ So why are we still paranoid?
 > - we don't have real control of our products apart from relying on CloudWatch or operations team telling us something's gone wrong
 > - we are not able to identify and solve problems in early stages
 
-Most importantly, we have a reputation to maintain, our **SLAs** commitment. This dashboard should really help us understand the live status of our products in a visual way using a traffic light system.
+Most importantly, we have a reputation to maintain and our **SLAs** commitment. This dashboard should really help us understand the live status of our products in a visual way using a traffic light system.
 
 # Whiteboard Session
 
@@ -37,25 +37,25 @@ To solve our problem, we chained ourselves up in a room as a team, brain stormin
 
 # A Common Ground
 
-There are a selection of frameworks and technologies we were really keen on, and best represent the diverse experience of our team: [Dashing](http://dashing.io/) (Ruby), [Dashing.js](https://github.com/fabiocaseri/dashing-js) (Js), [Play](https://playframework.com/) (Scala), [Scalatra](http://scalatra.org/) (Scala) and [Spark](http://sparkjava.com/) (Java).
+There are a selection of frameworks and technologies we were really keen on and best represent the diverse experience of our team: [Dashing](http://dashing.io/) (Ruby), [Dashing.js](https://github.com/fabiocaseri/dashing-js) (Js), [Play](https://playframework.com/) (Scala), [Scalatra](http://scalatra.org/) (Scala) and [Spark](http://sparkjava.com/) (Java).
 
 The intension was to build something we can use, but also taking the opportunity for everyone to get familiarised with Scala. For this reason, two frameworks stood out after we built a couple of proof of concepts are: Play and Scalatra.
 
-Scalatra is a barebone framework, which provides almost nothing but routing. It is the minimal way of producing API or website from scratch. But after two rounds of intense voting, we chose Play instead. Because as our first Scala project to be rolled out to production, we could use a bit of hand holding, such as the routing support, configurable settings, MVC boilerplate and built-in [testing framework](https://etorreborre.github.io/specs2/) provided in Play.
+Scalatra is a barebone framework, which provides almost nothing but routing. It is the minimal way of producing an API or website from scratch. But after two rounds of intense voting, we chose Play instead. Because as our first Scala project to be rolled out to production, we could use a bit of hand holding, such as the routing support, configurable settings, MVC boilerplate and built-in [testing framework](https://etorreborre.github.io/specs2/) provided in Play.
 
 # Forming, Storming, Norming and Performing
 
-You might already be wondering what are all these fuss about, use a ready made template, and save yourselves all the trouble.
+You might already be wondering what all the fuss is about, use a ready made template, and save yourselves all the trouble.
 
 Yes, we could.
 
-But as a young team only came to existence for 3 months, with everyone coming from different background with few common understandings on Scala (which is used a lot in our products), this project is perfect for us to learn to work together. Just like [Tuckman's Team Developing Strategy](https://en.wikipedia.org/wiki/Tuckman%27s_stages_of_group_development), we are in the beginning of the four stages, and throughout this series of articles, you will be able to find our how we have integrated as a team as well as our struggles. More on that later.
+But as a young team only came into existence 3 months ago, with everyone coming from different background with few common understandings on Scala (which is used a lot in our products), this project is perfect for us to learn to work together. Just like [Tuckman's Team Developing Strategy](https://en.wikipedia.org/wiki/Tuckman%27s_stages_of_group_development), we are in the beginning of the four stages, and throughout this series of articles, you will be able to find our how we have integrated as a team as well as our struggles. More on that later.
 
 # Continuous Delivery
 
 After agreeing on the design of dashboard and the technologies to use, the most important thing we need to think about is: how are we going to build something people want to use?
 
-Despite being in a startup or a big enterprise, it is not hard to find examples that people throw in 120% of effort on a project, but end up with virtually no appreciation for what they've created at all. The similarity of all those unsuccessful stories are: keeping the product development in the dark, and delivering it in one big bang release and hoping it will become a hit. It sounds insane when being pointed out, but haven't we all more or less done things like that before.
+Despite being in a startup or a big enterprise, it is not hard to find examples of people that put 120% effort into a project, but end up with virtually no appreciation for what they've created at all from their users. The similarity of all those unsuccessful stories are: keeping the product development in the dark, and delivering it in one big bang release and hoping it will become a hit. It sounds insane when being pointed out, but haven't we all more or less done things like that before.
 
 To move away from this pattern of failure, **continuous delivery** comes to the rescue, it gives certain advantages over the old model:
 
