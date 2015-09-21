@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "The Million Dollar Cock-up"
-tags: [""]
+tags: ["aws", "security", "credential", "operation", "github"]
 ---
 
 <div class="message">
-When it comes to making a mess of IT systems, there is simply no bottom line. Amongst the places I've worked for, I have seem developers making cock-ups ranging from mis-calculation in accountant reports, deleting TBs of data from production database, and recently open sourcing GitHub repos with AWS user keys.
+When it comes to making a mess of IT systems, there is simply no bottom line. Amongst the places I've worked for, I have seen developers making cock-ups ranging from mis-calculation in accountant reports, deleting TBs of data from production database, and recently open sourcing GitHub repos with AWS user keys.
 </div>
 
 # In a Nutshell
