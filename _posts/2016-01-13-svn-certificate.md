@@ -16,7 +16,7 @@ This should make easy using brew from a Mac.
 $ brew search subversion
 {% endhighlight %}
 
-It is important to make sure the version of Subversion installed is compatible with the subversion installed on the server. Subversion 1.7 and 1.8 (currently the default version on brew) are proven to be working interchangeably, source code checked in using 1.6 may not be easily upgraded.
+It is important to make sure the version of Subversion installed is compatible with the subversion installed on the server. Subversion 1.7 and 1.8 (1.9 is the latest stable version but I can't really speak for it) are proven to be working interchangeably, source code checked in using 1.6 may not be easily upgraded.
 
 # Certificate Conversion
 
