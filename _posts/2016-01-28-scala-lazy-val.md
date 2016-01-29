@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Scala lazy val"
-tags: [""]
+tags: ["scala", "val", "def", "lazy val", "performance", "evaluate"]
 ---
 
 <div class="message">
