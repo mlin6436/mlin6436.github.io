@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Response Headers Matter"
-tags: []
+tags: ["response", "header", "http", "httpclient", "https", "testing"]
 ---
 
 <div class="message">
