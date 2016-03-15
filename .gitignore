@@ -2,3 +2,4 @@
 _site
 *.iml
 _drafts/
+*.lock
