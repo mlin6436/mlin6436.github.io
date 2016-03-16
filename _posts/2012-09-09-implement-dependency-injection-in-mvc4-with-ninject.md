@@ -16,11 +16,11 @@ This actually prevents me from using `Ninject.MVC3` like I used to do in MVC 3. 
 > NOTE: By the time I am updating this blog, [Ninject for MVC 4](https://www.nuget.org/packages/Ninject.MVC4/) has been available for a white, and I am sure there are cleaner and better ways to implement dependency injection. But carry on reading if you are still interested in the though process, and have fun!
 
 
-#Add 'Ninject.MVC3' package
+# Add 'Ninject.MVC3' package
 
 You will see `NinjectWebCommon.cs` file is generated inside 'App_Start' folder, which was meant to be part of package adding process.
 
-#Modify 'Global.asax.cs'
+# Modify 'Global.asax.cs'
 
 - Inherit `MvcApplication` from `NinjectHttpApplication` instead of `HttpApplication`
 - Implement `OnApplicationStarted` method inherited from `NinjectHttpApplication`, and move all registers in `Application_Start` this method to support the normal usage of those functions
@@ -85,7 +85,7 @@ namespace Ninject.MVC4
 }
 {% endhighlight %}
 
-#Modify controller
+# Modify controller
 
 Introduce service into controller constructor before consumption.
 
@@ -103,6 +103,6 @@ namespace MVC4.Controllers
 }
 {% endhighlight %}
 
-#Delete 'NinjectWebCommon.cs'
+# Delete 'NinjectWebCommon.cs'
 
 By specifying client endpoint, the service injection is done.

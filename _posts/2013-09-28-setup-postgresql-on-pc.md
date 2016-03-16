@@ -10,7 +10,7 @@ After few years working on MSSQL, I almost forgot there are still a whole world 
 
 Long story short, I cracked on setting up a PostgreSQL as it is work-related, and I probably should have done it on Linux. But the web portal is .NET based, so here we are.
 
-#Install PostgreSQL and pgAdmin
+# Install PostgreSQL and pgAdmin
 
 You can find a copy of PostgreSQl and pgAdmin right [here](http://www.postgresql.org/download/windows/).
 
@@ -22,7 +22,7 @@ After clicking `OK`, you should be able to see the new instance being created.
 
 {% include image.html url="/media/2013-09-28-setup-postgresql-on-pc/postgresql-02.png" width="100%" description="New PostgreSQL server instance" %}
 
-#Restore a Database
+# Restore a Database
 
 Now you can choose to create a new database or restore from backup. Since I was buggered by restoring, I am going to show you how I dealt with it.
 
@@ -34,7 +34,7 @@ This means I have to use `psql` tool to restore the database manually:
 $ cat <file>.backup | psql <db>
 {% endhighlight %}
 
-#ORM
+# ORM
 
 Setting up a PostgreSQL seems to be a nice and painless experience, but how do I consume it?
 
@@ -54,7 +54,7 @@ Since we are not communicating with any public network, I find the file `C:\Prog
 
 After this, you can very much keep clicking next until finish if you don't have any specific requirements. And you will find yourself in a place as if you are using LinqToSQL.
 
-#Conclusion
+# Conclusion
 
 PostgreSQL is probably not as powerful as MSSQL, but you get most of day to day functions if you are not hardcore DBA. It can be hosted on different platforms, and most importantly it is free.
 

@@ -8,31 +8,31 @@ tags: ["integration", "java", "activemq", "mq", "message queue", "websocket", "p
 I've been working on a hack to get twitter feed integrated into our application. With <a href="http://stackoverflow.com/questions/2868627/why-should-a-web-architecture-be-loosely-coupled" target="_self">loose coupling</a> is good for almost all web-based solutions in mind, a separate container that is dedicated to store, manage and process the feeds would be a nice thing to have. In which, I set out to implement this simple message queue service using ActiveMQ and WebSocket.
 </div>
 
-#TL;DR
+# TL;DR
 
 If you just want to see a working example, or make sure you get the right dependencies: boom, [here](https://github.com/mlin6436/twitter-integration) you go!
 
-#What is Message Queue?
+# What is Message Queue?
 
 You probably can find a dozen [explanations](http://en.wikipedia.org/wiki/Message_queue), but what it really means to me is that, Message Queue is a storage area of a mechanism, which allows distributed applications to communicate asynchronously by sending messages between the applications.
 
-#Why Message Queue?
+# Why Message Queue?
 
 This [article](http://blog.iron.io/2012/12/top-10-uses-for-message-queue.html?spref=tw) gives you a lot of reasons why Message Queue could be so beneficial to large scale systems integration. Speaking from my experience working in various integration projects, Message Queue is the pursue for optimal performance, scalability and resilience, also low level of [coupling](http://martinfowler.com/ieeeSoftware/coupling.pdf), while accomplishing asynchronous communication, buffering and filtering at the same time.
 
-#What choices do I have?
+# What choices do I have?
 
 There are several renowned Message Queue brokers available, such as [ActiveMQ](http://activemq.apache.org/), [RabbitMQ](http://www.rabbitmq.com/) and [ZeroMQ](http://zeromq.org/). They all have their [merits](http://stackoverflow.com/questions/731233/activemq-or-rabbitmq-or-zeromq-or), so it is really up to you to make the best choice base on your circumstances. And just in case you are interested, I personally like RabbitMQ a lot, but since ActiveMQ comes for free in some ESB containers, why bother reinventing the wheel, right :)
 
 {% include image.html url="/media/2014-07-02-a-twitter-integration-using-mq/stay-mediocre.gif" width="100%" description="Stay mediocre" %}
 
-#An example would be nice...
+# An example would be nice...
 
 The example I put together is a middle layer between twitter API and our applications, using ActiveMQ and WebSocket to implement the messaging service.
 
 Its purpose is to make sure we are able to deliver tweets across different applications in a consistent and timely fashion. While to be precise, it is essentially to ensure we have a mechanism to filter out some pottery mouthes, control and monitor traffics to our applications.
 
-##1. Install ActiveMQ
+## 1. Install ActiveMQ
 
 If you are on a Mac, use [brew](http://brew.sh/). Otherwise, you should always be able to find somehting that fits you [here](http://activemq.apache.org/getting-started.html).
 
@@ -49,7 +49,7 @@ $ netstat -an | grep 61616
 
 or browse to [http://localhost:8161](http://localhost:8161). As basic usage, we are only interested in 'Queues', where the number of consumers, message queued and dequeued are displayed in the dashboard.
 
-##2. Java 8
+## 2. Java 8
 
 If you can't be asked to pre-installed Java in Mac, you can always [download](http://www.oracle.com/technetwork/java/javase/downloads/index.html?ssSourceSiteId=otnjp) and install the latest and greatest, even though it is slightly trickier to set the configure the Mac, that doesn't mean it is not doable.
 
@@ -66,7 +66,7 @@ $ rm CurrentJDK
 $ ln -s cd /Library/Java/JavaVirtualMachines/<jdk_version>/Contents/ CurrentJDK
 {% endhighlight %}
 
-##3. Producer and Consumer
+## 3. Producer and Consumer
 
 The whole message queueing fits in [producer-consumer](http://java.dzone.com/articles/producer-consumer-pattern) pattern perfectly. On one hand, the producer will stock the new tweets into the queue. On the other, the consumer will fetch the messages from the queue and process them.
 
@@ -133,7 +133,7 @@ public class Consumer {
 }
 {% endhighlight %}
 
-##4. Twitter integration
+## 4. Twitter integration
 
 To make devs' life easier, Twitter provides a nice HTTP client, called [hbc](https://github.com/twitter/hbc).
 
@@ -215,7 +215,7 @@ public class Tweet {
 }
 {% endhighlight %}
 
-##5. Send via WebSocket
+## 5. Send via WebSocket
 
 Once the queue started filling with junks, errr, I mean tweets. We need to find a way to let the messages out before the queue [implodes](http://activemq.apache.org/producer-flow-control.html).
 
@@ -322,7 +322,7 @@ public class TweetFeedServer {
 }
 {% endhighlight %}
 
-#In summary
+# In summary
 
 The setup of ActiveMQ and Twitter Integration are pretty straight forward, yet finding the way to produce and consume messages took a while to try, also deciding what to use and how to implement the broadcasting part is quite fun.
 

@@ -8,7 +8,7 @@ tags: ["diskpart", "command", "windows", "sysadmin", "disk management"]
 As an automation process for disk configuration and manipulation, using the command line DiskPart is a must as a SysAdmin.
 </div>
 
-#To get you started
+# To get you started
 
 [DiskPart](http://technet.microsoft.com/en-gb/library/cc766465.aspx) allows us to manage disks, partitions or volumes just like [Disk Management](http://www.disk-partition.com/resource/disk-management-windows7.html) tool does. To get started, type in `cmd` after `start + r` to open the command prompt, and type in `diskpart`.
 
@@ -24,7 +24,7 @@ To list all volumes on this device, use `list volume`.
 
 Similarly, if we interested in disk or partition information, `list disk` and `list partition` are always available.
 
-#Roll like a sysadmin
+# Roll like a sysadmin
 
 To begin doing some damage, you need to first locate the target using commands like `select disk 1`. The details are as followed:
 

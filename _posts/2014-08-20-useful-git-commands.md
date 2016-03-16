@@ -8,9 +8,9 @@ tags: ["git", "commands"]
 I have summarised some high usage Git commands, grouped by common Git workflow. If you are new to Git, going through the basics should be more than enough to get you started. On top of that, it is all about smoke and mirrors that every hardcore Git users would like to show off. So enjoy!
 </div>
 
-#Basics to get started
+# Basics to get started
 
-##1. Setup
+## 1. Setup
 
 For Mac, `brew install git`.
 
@@ -20,7 +20,7 @@ For Windows, download the bash client [here](http://www.git-scm.com/) and instal
 
 Even though I tend to avoid GUIs cause they are confusing, inefficient and most importantly not hipster, you can still find something from [GitHub](https://mac.github.com/) or [Tower](http://www.git-tower.com/).
 
-##2. Create a repository
+## 2. Create a repository
 
 Easy peasy.
 
@@ -28,7 +28,7 @@ Easy peasy.
 $ git init
 {% endhighlight %}
 
-##Copy a remote repository
+## Copy a remote repository
 
 You can copy either from a server or most likely GitHub, you can have a quick scan through [this](https://gist.github.com/grawity/4392747) to decide which remote URL to use.
 
@@ -38,7 +38,7 @@ $ git clone <repository>
 
 I personally use SSH because I used to work behind a corporate proxy.
 
-##Stage changes
+## Stage changes
 
 Before commit, you need to group your changes and add them into stage.
 
@@ -60,7 +60,7 @@ Some really cool [stuff](http://nuclearsquid.com/writings/git-add/) you should t
 $ git add -p
 {% endhighlight %}
 
-##Stash changes
+## Stash changes
 
 Not ready to commit, or before re-synchronising your code with remote and don't want to lose your local changes? Stash them.
 
@@ -94,7 +94,7 @@ Unless you want to both apply a change set and keep the stash in the stack.
 $ git stash apply <stash>
 {% endhighlight %}
 
-##Commit changes
+## Commit changes
 
 Happy with the changes? Commit them and give them a meaningful message. And I seriously mean [it](http://stackoverflow.com/questions/43598/suggestions-for-a-good-commit-message-format-guideline)!
 
@@ -102,7 +102,7 @@ Happy with the changes? Commit them and give them a meaningful message. And I se
 $ git commit -m "<message>"
 {% endhighlight %}
 
-##Commit logs
+## Commit logs
 
 Like showing commit history in any version control system, Git is just more powerful in every single way.
 
@@ -130,7 +130,7 @@ Even more crazy things you can do, like displaying an ASCII art tree commits dec
 $ git log --graph --oneline --decorate --all
 {% endhighlight %}
 
-##Push changes
+## Push changes
 
 So far it is all great, but only in your machine. If you want to be colleborative, push your commits to the central repository so that your colleagues can [criticise](http://dilbert.com/strips/comic/2011-01-14/) them.
 
@@ -146,7 +146,7 @@ $ git remote add origin <remote>
 
 Then do the push again.
 
-##Branch
+## Branch
 
 It's important to get codebase organised using dedicated branches for stuff like new feature, bugfix or release candidate. [This](http://nvie.com/posts/a-successful-git-branching-model/) has been proven to be a very successful branching model for the majority.
 
@@ -182,7 +182,7 @@ $ git push -u origin <branch>
 
 `-u` is to establish a tracking relationship between a branch and its remote branch
 
-##Update
+## Update
 
 It is a good idea to get a cup of tea in the morning, and update your code!
 
@@ -190,7 +190,7 @@ It is a good idea to get a cup of tea in the morning, and update your code!
 $ git pull
 {% endhighlight %}
 
-##Merge and Rebase
+## Merge and Rebase
 
 And because you haven't done what I suggested above often enough, you are more than likely to end up with conflicts after a short while.
 
@@ -246,7 +246,7 @@ Push the new codebase to your fork.
 $ git push origin master -f
 {% endhighlight %}
 
-##Tagging
+## Tagging
 
 Tag a specific commit for release.
 
@@ -254,11 +254,11 @@ Tag a specific commit for release.
 $ git tag <tag> <commit>
 {% endhighlight %}
 
-#The power of undoing
+# The power of undoing
 
 Use with caution.
 
-##Undo changes
+## Undo changes
 
 Before changes are staged, you can revert a single file.
 
@@ -272,7 +272,7 @@ Or revert all of them.
 $ git reset --hard HEAD
 {% endhighlight %}
 
-##Undo stage
+## Undo stage
 
 What happens if you put the wrong file into stage, or don't want it to be part of the commit?
 
@@ -280,7 +280,7 @@ What happens if you put the wrong file into stage, or don't want it to be part o
 $ git reset <file>
 {% endhighlight %}
 
-##Undo commits
+## Undo commits
 
 Revert a commit by creating a new commit to rollback last commit.
 
@@ -302,7 +302,7 @@ $ git reset --hard <commit>
 
 Reset is similar to revert under the hood, the removed info is still kept in git database for 30 days. So you can always unearth them if you want.
 
-##Rewrite last commit message
+## Rewrite last commit message
 
 Wrote something inappropriate? Rewrite it. Limited to last commit only.
 
@@ -310,7 +310,7 @@ Wrote something inappropriate? Rewrite it. Limited to last commit only.
 $ git commit --amend
 {% endhighlight %}
 
-##Delete a branch
+## Delete a branch
 
 Remove a branch locally.
 
@@ -324,7 +324,7 @@ And remotely.
 $ git branch -dr origin/<branch>
 {% endhighlight %}
 
-#It's all about Flexibility
+# It's all about Flexibility
 
 Git is highly configurable in itself.
 
@@ -344,7 +344,7 @@ You don't have to wait for the 2.1.0 to able to display a wrapped log like the e
 $ git config core.pager "less"
 {% endhighlight %}
 
-#Some things to bear in mind
+# Some things to bear in mind
 
 Git is a powerful tool, but it doesn't prevent you from shooting your own foot if you don't work under some basic principles. In order to make everyone's life easier, it is useful to have some common sense when working with Git.
 

@@ -8,13 +8,13 @@ tags: ["test", "nunit", "setup", "vs", "visual studio", "2012", "2013"]
 Unit testing is good, <a href="http://martinfowler.com/bliki/TestDrivenDevelopment.html">TDD</a> is even better. To smooth out the workflow in Visual Studio, I will present some of my favourite ways of setting up NUnit in my projects, and hopefully that helps win some skeptics whom think it is too much hassle doing TDD back.
 </div>
 
-#Project setup
+# Project setup
 
 In a typical project setup, you should have one test project per source project with [NUnit](https://www.nuget.org/packages/nunit/) referenced.
 
 {% include image.html url="/media/2014-09-04-test-environment-setup-in-vs/test-01.png" width="100%" description="A typical source and test setup" %}
 
-#NUnit Executable
+# NUnit Executable
 
 One way of using NUnit is quite manual, which you need to install [NUnit](http://nunit.org/?p=download) to your system.
 
@@ -40,7 +40,7 @@ Click `Run`, and ta-da.
 
 {% include image.html url="/media/2014-09-04-test-environment-setup-in-vs/test-06.png" width="100%" description="NUnit control pannel after running the tests" %}
 
-#NUnit Extension in Visual Studio
+# NUnit Extension in Visual Studio
 
 A more seamless way of using NUnit in Visual Studio is: go to `TOOLS` -> `Extensions and Updates`, find the `NUnit Test Adapter` in Visual Studio online gallery and install it.
 
@@ -54,7 +54,7 @@ With the `Run All` and other execution options available, you should try to push
 
 {% include image.html url="/media/2014-09-04-test-environment-setup-in-vs/test-04.png" width="100%" description="Test Explorer window with a dummy test I created" %}
 
-#Resharper
+# Resharper
 
 The last and the most expensive way, is to install [Resharper](http://www.jetbrains.com/resharper/download/). It's undeniably costly, yet you are more likely to gain a lot of time in return in the long run.
 
@@ -64,7 +64,7 @@ And you surely will not miss what pops up onto your screen.
 
 {% include image.html url="/media/2014-09-04-test-environment-setup-in-vs/test-07.png" width="100%" description="Resharper Unit Test Session" %}
 
-#Conclusion
+# Conclusion
 
 In my opinion, even though Resharper is not a cheap option, but you do get a lot of other cool refactor functionalities, and smoother workflow.
 

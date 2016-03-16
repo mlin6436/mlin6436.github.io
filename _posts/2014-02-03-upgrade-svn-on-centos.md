@@ -8,7 +8,7 @@ tags: ["svn", "subversion", "centos", "sqlite", "apr", "apr-util", "serf", "http
 After searching through the web, I managed to find bits and pieces about upgrading subversion from 1.6 to 1.7 on CentOS. Unfortunately, it is like unraveling a puzzle, every blog starts from a slightly different angle and came across different blocks. I was strapped in perpetual trying and failing because of this. So I thought I better summarise and share my whole experience, along with the pitfalls while trying to work it out. The upgrade, in a nutshell, is a process of uninstalling the current version of svn, and download, compile and install the target version.
 </div>
 
-#Remove current svn
+# Remove current svn
 
 That's right! You heard me, be brave and remove svn using:
 
@@ -16,7 +16,7 @@ That's right! You heard me, be brave and remove svn using:
 $ yum remove subversion
 {% endhighlight %}
 
-#Download target version of svn
+# Download target version of svn
 
 Go to this location, download and unzip the package there:
 
@@ -29,7 +29,7 @@ $ tar zxf subversion-1.7.16.tar.gz -C subversion
 
 Surely you might come across problem like, you can't download the specific version because it does not exist. Fear not, just go to this [mirror](http://apache.mirrors.timporter.net/subversion/), and find the version you want and wget it again.
 
-#Download other packages for svn
+# Download other packages for svn
 
 In the 'subversion' folder you've just created, we need to add two other packages 'apr' and 'apr-util' before svn can be compiled.
 
@@ -45,7 +45,7 @@ $ tar zxf apr-util-1.5.3.tar.gz
 
 Again, you should be able to find a more up-to-date version [here](http://apache.mirrors.tds.net/apr/) if necessary.
 
-#Configure subversion
+# Configure subversion
 
 Run the script for auto-configuration:
 
@@ -53,7 +53,7 @@ Run the script for auto-configuration:
 $ ./configure
 {% endhighlight %}
 
-##1. Oops, you might need sqlite
+## 1. Oops, you might need sqlite
 
 The steps have been straight forward so far, yet configure may fail because of the following reason:
 
@@ -99,7 +99,7 @@ Even though this step does work quite well for me, keep on trying to find the co
 
 Once you can confirm you have sqlite 3.7.0.1 or later, it is all good to go... to the next step.
 
-##2. Yet another Oops, you might need to install sqlite manually
+## 2. Yet another Oops, you might need to install sqlite manually
 
 Sometimes, even if everything seems to be correct, it just won't work. That leaves you the last option: get the sqlite files and put it in the directory specified just for svn configuration's sake:
 
@@ -110,7 +110,7 @@ $ wget http://www.sqlite.org/2013/sqlite-amalgamation-3080200.zip
 $ tar zxf sqlite-amalgamation-3080200.zip -C sqlite-amalgamation
 {% endhighlight %}
 
-#Sit back, have a cup of tea and let subversion do the rest
+# Sit back, have a cup of tea and let subversion do the rest
 
 At last, you should have ingredient subversion needs, and should be able to compile and install it. Otherwise, I seriously have no idea what you are up against, so go cry for help [elsewhere](http://stackoverflow.com/)!
 
@@ -120,7 +120,7 @@ $ make && make install
 
 Check the subversion vesion to make sure it is properly installed, and you might want to reboot the box as well.
 
-#Upgrade the existing project
+# Upgrade the existing project
 
 By running the following command, you can then bring your old svn projects back to life.
 
@@ -128,7 +128,7 @@ By running the following command, you can then bring your old svn projects back 
 $ svn upgrade
 {% endhighlight %}
 
-#Configure certification for svn
+# Configure certification for svn
 
 For those who live under HTTPS protocol, you will need one extra thing so that you can live happily ever after, Serf. Serf is the package required by subversion to be able to use HTTPS communication with your P12 certificate.
 
@@ -150,7 +150,7 @@ $ echo 'ssl-client-cert-file = <P12>' >> ~/.subversion/servers
 $ echo 'ssl-client-cert-password = <***>' >> ~/.subversion/servers
 {% endhighlight %}
 
-#References
+# References
 
 [Centos Upgrade Subversion to Version 1.7](http://nixkb.org/2012/07/centos-upgrade-subversion-to-version-1-7/)
 

@@ -22,7 +22,7 @@ Even though dealing with day-to-day check in check out is an easy task using [To
 
 The step-by-step guide of setting up network share repository is as follow:
 
-#Server-side
+# Server-side
 
 - Download and install [VisualSVN Server](http://www.visualsvn.com/server/download/)
 - Open Visual SVN Server, choose `Create New Repository` to create a repository with the name you want
@@ -30,7 +30,7 @@ The step-by-step guide of setting up network share repository is as follow:
 
 Till now it is all ready to go.
 
-#Client-side
+# Client-side
 
 - Download and install [TortoiseSVN](http://tortoisesvn.net/downloads.html)
 - Right click on any project folder which is ready to be checked in as a trunk
@@ -41,7 +41,7 @@ Till now it is all ready to go.
 
 And that's all you need to do to setup a svn server and happy check in!
 
-#Refences
+# References
 
 [Why should set up network sharing repository](http://tortoisesvn.net/docs/release/TortoiseSVN_en/tsvn-serversetup.html)
 

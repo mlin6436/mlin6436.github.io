@@ -4,7 +4,7 @@ title: "Setup FTP Server and Consume It Programmatically"
 tags: ["ftp", "server", "client", "windows server 2008", "c#", ".net", "programmatically"]
 ---
 
-#Setup a FTP server on Windows Server 2008 R2
+# Setup a FTP server on Windows Server 2008 R2
 
 Open `Server Manager`, and add new `Role` to it.
 
@@ -44,7 +44,7 @@ Specify a port for FTP communication, and leave the rest as default.
 
 To verify the FTP is working, navigate to `ftp://<yourftpsiteaddress>` in your browser.
 
-#Consume FTP programmatically
+# Consume FTP programmatically
 
 {% highlight csharp %}
 //using System;

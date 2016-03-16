@@ -10,7 +10,7 @@ Since some legacy Windows services are getting more and more unstable and fall a
 
 The idea is to use a combination of Powershell script and Task Scheduler to trigger the job every now and then.
 
-#PowerShell
+# PowerShell
 
 Powershell is really easy to pick up. It only requires basic knowledge of Command Prompt, and the rest is just C#.
 
@@ -53,7 +53,7 @@ ServiceKickstarter $server $service
 
 NOTE: the server name is not required, if the script is to run from the target server directly.
 
-#Permission
+# Permission
 
 In order to run the script, you may have to sort out execution policy as well, because the restrictions on some servers. And you will see the following message:
 
@@ -74,6 +74,6 @@ Unrestricted - No restrictions; all Windows PowerShell scripts can be run.
 
 Instead of using default (which allows you to run nothing), 'RemoteSigned' is the level that can satisfy our requirement, and manage not to piss sysadmins off.
 
-#Scheduling
+# Scheduling
 
 The last job is to create the schedule task to make sure the script will check the target service(s). That's just to follow [Task Scheduler Wizard](http://www.7tutorials.com/how-create-task-basic-task-wizard) and you will get there eventually.

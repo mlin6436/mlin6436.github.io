@@ -8,7 +8,7 @@ tags: ["javascript", "remove", "delete", "object", "property", "element", "array
 Removing object property and array element in JavaScirpt is quite a different world. It is one of defining features that differentiate prototypal from classical OO languages.
 </div>
 
-#Objects vs Arrays
+# Objects vs Arrays
 
 First thing first, what are objects and arrays in JavaScirpt?
 
@@ -16,7 +16,7 @@ An [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Glo
 
 An [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), declared using '{ }', implemented like [associative arrays](https://en.wikipedia.org/wiki/Associative_array), or [set](https://en.wikipedia.org/wiki/Set_%28mathematics%29) in mathematical terms, has one or more key-value pairs as its properties. And because it is in the prototypal world, meaning objects are mutable, you can modify its properties on the fly as you wish.
 
-#Deleting Properties from an Object
+# Deleting Properties from an Object
 
 Assuming an objet like this:
 
@@ -34,7 +34,7 @@ delete myObj.colour // return: true
 
 This way, the property key value pair will be removed from the object, for good.
 
-#Modifying an Array
+# Modifying an Array
 
 Given the following array:
 

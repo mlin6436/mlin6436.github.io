@@ -14,11 +14,11 @@ This actually prevents me from using `Ninject.MVC3` like I used to do in MVC 3. 
 
 Therefore, I would highly recommend the following practices for the people who'd like to keep their project clean and tidy: no unnecessary package or exes checked in, but still be able to use the dependencies when the project is checked out.
 
-#Enabling package restore during build in Visual Studio options
+# Enabling package restore during build in Visual Studio options
 
 {% include image.html url="/media/2013-04-15-configure-nuget-in-version-control/configurenuget-01.png" width="100%" description="Enable package restore in options" %}
 
-#Enabling package restore in solution
+# Enabling package restore in solution
 
 {% include image.html url="/media/2013-04-15-configure-nuget-in-version-control/configurenuget-02.png" width="100%" description="Enable package restore in solution" %}
 
@@ -28,7 +28,7 @@ And you should be able to see this
 
 But it is not the end of the story, simply because you don't want to break the rules to check in any .dll or .exe.
 
-#Force NuGet.exe to download whenever needed
+# Force NuGet.exe to download whenever needed
 
  Open up `NuGet.targets`, find `DownloadNuGetExe`, and set the value to `true`.
 
@@ -37,7 +37,7 @@ But it is not the end of the story, simply because you don't want to break the r
 <DownloadNuGetExe Condition=" '$(DownloadNuGetExe)' == '' ">true</DownloadNuGetExe>
 {% endhighlight %}
 
-#Configure proxy to allow download
+# Configure proxy to allow download
 
 If you are working within an enterprise network, the auto-download of 'nuget.exe' might not work. In which case, you will have to configure a proxy for it.
 
@@ -66,13 +66,13 @@ Open up `NuGet.targets` again, find task `DownloadNuGet`, and configure the snip
 </Code>
 {% endhighlight %}
 
-#Some more tips
+# Some more tips
 
 To keep things neat and tidy, you can now delete the 'packages' folder, because that is the whole point of doing this, right? To remove the redundant dependency files, which saves not just space but also time checking out or cloning depends on what version control mechanism you use, instead allowing build event to retrieve them back automatically.
 
 You can now check in the changes to TFS, and you will find your TFS build server and your check out are working again!
 
-#References
+# References
 
 [Using Nuget without committing packages](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages)
 

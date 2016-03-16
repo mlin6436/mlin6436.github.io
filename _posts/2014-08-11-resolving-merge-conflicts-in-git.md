@@ -9,7 +9,7 @@ Merging conflicts, as one of the most traumatising experience any dev can have, 
 But with the help of Git, everything can be done so elegantly yet painless.
 </div>
 
-#Relax, you can't make it worse
+# Relax, you can't make it worse
 
 Yes, despite the fear and discomfort we all suffer on this topic, first thing to remember is that you literally can't make matters worse in Git.
 As notorious as it can be like a [tree conflict](#) in SVN, Git has already taken care of a lot of funky scenarios, leaving you a peace of mind while merging.
@@ -17,7 +17,7 @@ Also, as a last resort, you always have the choice to undo a merge.
 
 So [don't worry](http://www.youtube.com/watch?v=Oo4OnQpwjkc).
 
-#How do conflicts happen?
+# How do conflicts happen?
 
 A typical example could be the changes are made to the same part of code in the same file on two branches.
 
@@ -36,7 +36,7 @@ $ git merge foo
 
 We would receive a lovely message saying 'CONFLICT', and the merge should fail miserably.
 
-#How to deal with the conflicts?
+# How to deal with the conflicts?
 
 Supposingly, you can go blame the other people an incompetent dev, or a complete nutcase.
 
@@ -70,7 +70,7 @@ origin a <--- b <--- c <--- d < ---- e
  foo   a <--- b <----- d
 {% endhighlight %}
 
-#What if I make poo poo in the merge?
+# What if I make poo poo in the merge?
 
 As promised, you can undo the merge from the point of merge <strong>up to</strong> committing the changes, by:
 
@@ -84,4 +84,4 @@ The worst comes to the worst that you want to retract whatever merge is <strong>
 $ git reset --hard <commit>
 {% endhighlight %}
 
-#There's more to come... Rebase
+# There's more to come... Rebase
