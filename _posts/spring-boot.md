@@ -11,6 +11,10 @@ plugin: spring-boot-maven-plugin => enable packaging (use `mvn package` to creat
 plugin: id 'org.springframework.boot' version '2.1.1.RELEASE'
 dependencies: compile 'org.springframework.boot:spring-boot-starter-web:2.1.1.RELEASE'
 
+# Starters
+
+https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-project/spring-boot-starters
+
 # Application.java
 
 @RestController => stereotype annotation
