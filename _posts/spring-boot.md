@@ -17,10 +17,30 @@ https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-p
 
 # Application.java
 
-@RestController => stereotype annotation
+### @SpringBootApplication vs @EnableAutoConfiguration
+
+1. Availability 
+
+@EnableAutoConfiguation => Spring Boot 1.0
+@SpringBootApplication => Spring Boot 1.2
+
+2. @SpringBootApplication = @Configuration + @ComponentScan + @EnableAutoConfgiuration
+
+@Configuration => enable Java configuration
+@ComponentScan => enable component scanning, i.e. @Controller
 @EnableAutoConfiguration => assume a web application 
 
+3. @EnableAutoConfiguration exclusion
+
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+
+# *Controller.java
+
+@Controller
+@RestController => stereotype annotation
+
 @RequestMapping(“/“) => routing
+@ResponseBody
 
 # More Reading:
 
