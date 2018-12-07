@@ -42,11 +42,23 @@ __Application.java__
 
 __*Controller.java__
 
-@Controller
-@RestController => stereotype annotation
+### @Controller vs @RestController
 
-@RequestMapping(“/“) => routing
-@ResponseBody
+1. Funtionality
+
+@Controller => create a Map of model object and find a view
+@RestController => every method in the class returns the object as JSON or XML in HTTP Response
+
+2. Availability
+
+@Controller => Spring 2.5
+@RestController => Spring 4
+
+3. @RestController = @Controller + @ResponseBody
+
+4. @RestController <: @Controller <: @Component
+
+### @RequestMapping(“/“) => routing
 
 
 
