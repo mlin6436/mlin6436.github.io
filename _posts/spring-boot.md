@@ -19,7 +19,9 @@ https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-p
 
 
 
-# Application.java
+# Spring Application
+
+__Application.java__
 
 ### @SpringBootApplication vs @EnableAutoConfiguration
 
@@ -38,9 +40,7 @@ https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-p
 
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 
-
-
-# *Controller.java
+__*Controller.java__
 
 @Controller
 @RestController => stereotype annotation
@@ -50,7 +50,7 @@ https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-p
 
 
 
-# More Reading:
+# More Reading
 
 - https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-build-systems.html#using-boot-dependency-management
 - https://docs.spring.io/spring/docs/5.1.3.RELEASE/spring-framework-reference/web.html#mvc
