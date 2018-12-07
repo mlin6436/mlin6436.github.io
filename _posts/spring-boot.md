@@ -21,44 +21,53 @@ https://github.com/spring-projects/spring-boot/tree/v2.1.1.RELEASE/spring-boot-p
 
 # Spring Application
 
-__Application.java__
+__Application__
 
 ### @SpringBootApplication vs @EnableAutoConfiguration
 
-1. Availability 
+- Availability 
 
 @EnableAutoConfiguation => Spring Boot 1.0
 @SpringBootApplication => Spring Boot 1.2
 
-2. @SpringBootApplication = @Configuration + @ComponentScan + @EnableAutoConfgiuration
+- @SpringBootApplication = @Configuration + @ComponentScan + @EnableAutoConfgiuration
 
 @Configuration => enable Java configuration
 @ComponentScan => enable component scanning, i.e. @Controller
 @EnableAutoConfiguration => assume a web application 
 
-3. @EnableAutoConfiguration exclusion
+- @EnableAutoConfiguration exclusion
 
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 
-__*Controller.java__
+__Controllers__
 
 ### @Controller vs @RestController
 
-1. Funtionality
+- Funtionality
 
 @Controller => create a Map of model object and find a view
 @RestController => every method in the class returns the object as JSON or XML in HTTP Response
 
-2. Availability
+- Availability
 
 @Controller => Spring 2.5
 @RestController => Spring 4
 
-3. @RestController = @Controller + @ResponseBody
+- @RestController = @Controller + @ResponseBody
 
-4. @RestController <: @Controller <: @Component
+- @RestController <: @Controller <: @Component
 
 ### @RequestMapping(“/“) => routing
+
+__Service__
+
+### @Service
+
+### @Autowired
+
+- Used for DI via constructor
+- If a bean has one constructor, @Autowired can be ommited
 
 
 
