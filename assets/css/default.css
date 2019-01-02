@@ -102,7 +102,7 @@ img {
 }
 
 #article, #comments {
-	font-family: Fenix, Georgia, "Times New Roman", serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	letter-spacing: 0px;
 	font-size: 20px;
@@ -173,7 +173,7 @@ img.site-icon-page {
 }
 
 #article {
-	font-family: "PT Serif", Georgia, "Times New Roman", serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	letter-spacing: 0px;
 	font-size:20px;
@@ -498,7 +498,7 @@ pre code {
 .post-description {
 	color: #777;
 	font-size: 15pt;
-	font-family: "PT Serif", Georgia, "Times New Roman", serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .post-date {
