@@ -83,7 +83,7 @@ def getName(name: Option[String]): String =
 println(getName(name))
 {% endhighlight %}
 
-# `case class`
+# Case Class
 
 If you still weren't convinced, this is would be the one killer feature that would make you think otherwise immediately. Every Java user would know how much boilerplate code you have to write to implement a simple data model class.
 
