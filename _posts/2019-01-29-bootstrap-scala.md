@@ -32,7 +32,7 @@ Similar to `sbt`, `activator`, which is short for `typesafe-activator`, is creat
 
 `activator` is a wrapper around `sbt`, and also offers a rich set of Lightbend and third party Scala project templates to bootstrap a project, such as "akka", "finatra", "play", "spark" and etc, just to name a few.
 
-You can install it conveniently via `brew install typesafe-activator`. And it's pretty simple to use as well, run `activator`.
+You can install it conveniently via `brew install typesafe-activator`. And it's pretty simple to use as well, run `activator` and you will be prompted hints on the usage.
 
 # Conclusion
 
