@@ -76,7 +76,7 @@ You might have also noticed that pattern match is able to unwrap a monad (Option
 {% highlight scala %}
 def getName(name: Option[String]): String =
     name match {
-      case Some(str) if str == "default" => "can't use default as a name" // pattern guards
+      case Some("default") => "can't use default as a name" // pattern guards
       case Some(str) => s"Hello: $str" // unwrap a monad
       case None => "no name"
     }
