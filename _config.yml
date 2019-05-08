@@ -8,15 +8,14 @@ permalink:	/blog/:title
 paginate_path: 'page:num'
 
 # Setup
-title:		Meng Lin
+title:		林猛 Lin Meng
 tagline:	'Playground'
-description:	'Share ideas, experience and good jokes.'
+description:	'Tech advocate of good engineering practices and new technologies'
 url:		http://mlin6436.github.io/
 commentsystem:	google
 
 author:
-  name:		'Meng Lin'
-  url:		https://google.com/+MengLin
+  name:		'林猛 Lin Meng'
 
 paginate:	5
 
@@ -32,10 +31,6 @@ social:
   - icon:	github
     url:	https://github.com/mlin6436
     desc:	Fork me on GitHub
-
-  - icon:	googleplus-alt
-    url:	https://google.com/+MengLin
-    desc:	Add me on Google+
 
   - icon:	linkedin
     url:	http://uk.linkedin.com/in/mlin6436
