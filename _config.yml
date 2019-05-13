@@ -8,14 +8,14 @@ permalink:	/blog/:title
 paginate_path: 'page:num'
 
 # Setup
-title:		林猛 Lin Meng
+title:		Meng Lin
 tagline:	'Playground'
 description:	'Tech advocate of good engineering practices and new technologies'
 url:		http://mlin6436.github.io/
 commentsystem:	google
 
 author:
-  name:		'林猛 Lin Meng'
+  name:		'Meng Lin'
 
 paginate:	5
 
